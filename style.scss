@@ -41,6 +41,7 @@ a {
   min-height: 100vh;
   width: 100%;
   margin: auto;
+  padding-bottom: 1rem;
 
   header {
     text-align: center;
@@ -74,32 +75,27 @@ a {
 }
 
 .website-header {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 4rem;
+  z-index: 1;
+  position: fixed;
+  background-color: white;
   width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  color: goldenrod;
-  * {
-    flex: 1;
-  }
   .logo {
-    height: 4rem;
-    a {
-      padding: 0;
-    }
+    height: 3rem;
+    margin: 0 auto;
     img {
-      width: 20rem;
+      height: 4rem;
+      width: auto;
+      margin: auto;
     }
   }
-  nav {
-    ul {
-      li {
-        a {
-          color: goldenrod;
-          font-size: 1.25rem;
-        }
-      }
-    }
+  .navigation {
+    visibility: hidden;
+    height: 0;
   }
 }
 
@@ -148,8 +144,12 @@ a {
     flex-direction: column-reverse;
   }
 }
-.facilitati {
+.facilitati,
+.galerie,
+.contact {
   background-color: rgb(236, 236, 236);
+}
+.facilitati {
   .section-container {
     justify-content: center;
 
@@ -173,6 +173,30 @@ a {
     }
   }
 }
+.filmare-drona,
+.tur-virtual,
+.contact {
+  .section-container {
+    height: 80vh;
+    iframe {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+.contact {
+  a {
+    display: block;
+    border: solid 1px goldenrod;
+    width: 10rem;
+    padding: 0.5rem;
+    margin: 1rem 0;
+    border-radius: 10rem;
+    color: goldenrod;
+    text-align: center;
+  }
+}
 
 @media screen and (min-width: 800px) {
   .section-wrapper {
@@ -186,13 +210,45 @@ a {
       }
     }
   }
-  .navigation {
-    margin: auto 0px;
-    width: 40rem;
-    height: 15rem;
-  }
-  .navigation-links {
+  .website-header {
+    width: 100%;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    color: goldenrod;
+    * {
+      flex: none;
+      gap: 1rem;
+    }
+    .logo {
+      margin: 0;
+      a {
+        padding: 0;
+      }
+      img {
+        width: 20rem;
+      }
+    }
+    nav {
+      ul {
+        li {
+          a {
+            color: goldenrod;
+            font-size: 1.25rem;
+          }
+        }
+      }
+    }
+    .navigation {
+      margin: auto 0px;
+      // width: 10rem;
+      padding-right: 1rem;
+      visibility: visible;
+      height: auto;
+    }
+    .navigation-links {
+      display: flex;
+      flex-direction: row;
+    }
   }
 }
