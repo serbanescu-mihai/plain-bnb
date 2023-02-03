@@ -213,7 +213,38 @@ a {
     }
   }
 }
-
+.galerie {
+  .section-container {
+    flex-direction: column;
+    .button-container {
+      text-align: center;
+      .slider-button {
+        font-size: 2rem;
+        padding: 0.5rem 1rem;
+        background-color: goldenrod;
+        border: none;
+        color: white;
+        border-radius: 0.5rem;
+        cursor: pointer;
+      }
+    }
+    .image-carousel {
+      //   width: 100vw;
+      max-width: 50rem;
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      .slide {
+        position: absolute;
+        opacity: 0;
+      }
+      .slide[data-active] {
+        opacity: 1;
+      }
+    }
+  }
+}
 .contact {
   a {
     display: block;
@@ -293,6 +324,11 @@ a {
       a {
         color: goldenrod;
       }
+    }
+  }
+  .galerie {
+    .section-container {
+      flex-direction: column;
     }
   }
 }
