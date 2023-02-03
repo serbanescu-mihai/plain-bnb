@@ -168,7 +168,7 @@ a {
   padding: 3rem 0;
 }
 .facilitati .images-container img {
-  width: 30rem;
+  max-width: 30rem;
   background: no-repeat;
   -o-object-fit: cover;
      object-fit: cover;
